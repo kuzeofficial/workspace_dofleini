@@ -35,16 +35,16 @@
     display:flex;
 }
 
-.btnCantPersonas{
+.btnPeopleAm{
     background:white;
     border: 1px solid rgba(128,128,128,0.3);
 }
-.btnCantPersonas:hover{
+.btnPeopleAm:hover{
     border: 1px solid rgba(20, 172, 172, 0.5);
     box-shadow: 0 0 5px 0.1rem rgba(20, 172, 172, 0.3);
     color: rgba(20, 172, 172, 0.9);
 }
-.btnCantPersonas:focus{
+.btnPeopleAm:focus{
     border: 1px solid rgba(20, 172, 172, 0.5);
     box-shadow: 0 0 5px 0.1rem rgba(20, 172, 172, 0.3);
     color: rgba(20, 172, 172, 0.9); 
@@ -72,6 +72,7 @@ i{
 }
 .btnColor:hover{
     box-shadow: 0 0 0 0.2rem gray;
+    cursor: pointer;
 }
 
 .privacidad{

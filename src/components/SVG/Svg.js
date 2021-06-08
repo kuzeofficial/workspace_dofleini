@@ -623,7 +623,7 @@ function SvgComponent(props) {
                 y="33"
                 style={{
                   fill:"black"}}
-                >Trabajadores:<tspan> {peopleAmount}}</tspan></text>
+                >Trabajadores:<tspan> {peopleAmount}</tspan></text>
                <text
                 x="440"
                 y="33"
