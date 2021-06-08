@@ -3,12 +3,25 @@ import { DataContext } from '../../lib/DaContext';
 import { Logo } from '../logo';
 
 export const Form = () => {
-    const {data,setdata}=useContext(DataContext);
+    const {value,setValue}=useContext(DataContext);
     const FileUpload = useRef();
-    const ButtonFileHandler = (event) ={
-        event.preventDefault();
+    const {imageProfile,workspaceName,linkWorkspace}=value;
+
+    const ButtonFileHandler=(e)=>{
+        e.preventDefault();
         FileUpload.current.click();
-    };
+    }
+    
+    const handleChangeInput=(e)=>{
+        const file=e.target.files[0];
+        if(file){
+       const url=URL.createObjectURL(e.target.files[0]);
+       setValue({
+           ...value,
+        imageProfile:url
+       }) 
+    }
+    }
     return (
         <div className="col-lg-6">
             <form>
@@ -18,7 +31,7 @@ export const Form = () => {
                         Logo del espacio
                     </h6>
                     <div className="logoimage">
-                        <img src={} alt="B" className="imageLogo"></img>
+                        <img src={imageProfile} alt="B" className="imageLogo"></img>
                         <button className="btn btnPeopleAmou colorgray ml-3" 
                             onClick={ButtonFileHandler}>
                         <span className="fas fa-upload"></span>Subir Logo</button>
@@ -29,16 +42,25 @@ export const Form = () => {
                         <div > 
                             <strong> Nombre del espacio </strong>
                             <input type="text" onChange={(e) => {
-                                event.preventDefault();
-                                setdata({
-                                    ...data,
-                                    workspaceName: event.target.value
+                                e.preventDefault();
+                                setValue({
+                                    ...value,
+                                    workspaceName: e.target.value
                                 })
                             }}
                             value={workspaceName} className="form-control mt-2" placeholder="Ep: Mi espacio de trabajo"></input>
                         </div>
                         <div className="mt-4">
-                            <strong className="mt-3">URL del espacio (direccion web)</strong>
+                        <strong className="mt-3">URL del espacio (direccion web)</strong>
+                        <div className="input-group">
+                        <input type="url" onChange={(e) => {
+                            setValue({
+                                ...value,
+                                linkWorkspace:e.target.value
+                            })
+                        }}
+                        value={linkWorkspace} className="form-control mt-2" placeholder="Ep: mi.dominio                                                                         .dofleini.com"></input>
+                        </div>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,107 @@
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+.displaySmall{
+    flex-direction: column;
+}
+.SmallDevice{
+    margin-top: 5px;
+    margin-left: 0;
+}
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+    .hide{
+        display:none;
+    }
+ }
+
+ @media (max-width: 1040px) { 
+    .responsiveWidth{
+        width:450px;
+    }
+ }
+
+
+.imgLogo{
+    width:100px;
+    height:100px;
+    border-radius: 100%;
+}
+.displayFlex{
+    display:flex;
+}
+
+.btnCantPersonas{
+    background:white;
+    border: 1px solid rgba(128,128,128,0.3);
+}
+.btnCantPersonas:hover{
+    border: 1px solid rgba(20, 172, 172, 0.5);
+    box-shadow: 0 0 5px 0.1rem rgba(20, 172, 172, 0.3);
+    color: rgba(20, 172, 172, 0.9);
+}
+.btnCantPersonas:focus{
+    border: 1px solid rgba(20, 172, 172, 0.5);
+    box-shadow: 0 0 5px 0.1rem rgba(20, 172, 172, 0.3);
+    color: rgba(20, 172, 172, 0.9); 
+}
+
+p{
+    color:gray;
+}
+i{
+    color:gray;
+}
+.colorgray{
+    color: gray;
+}
+
+.btnColor{
+    width:30px;
+    height:30px;
+    border-radius:100%;
+    margin-left:8px;
+}
+
+.btnColor:focus{
+    outline:none;
+}
+.btnColor:hover{
+    box-shadow: 0 0 0 0.2rem gray;
+}
+
+.privacidad{
+    display: flex;
+    padding:10px;
+    border: 1px solid rgba(128,128,128,0.3);
+    cursor: pointer;
+    margin-left: 10px;
+}
+.privacidad:hover {
+    border: 1px solid rgba(20, 172, 172, 0.5);
+    box-shadow: 0 0 5px 0.1rem rgba(20, 172, 172, 0.3);
+}
+.privacidad:hover strong{
+    color:rgb(25, 76, 218);
+}
+.privacidadChecked{
+    border: 1px solid rgba(20, 172, 172, 0.5);
+    box-shadow: 0 0 5px 0.1rem rgba(20, 172, 172, 0.3);
+}
+.privacidadChecked strong{
+    color:rgb(25, 76, 218);
+}
+.radioButtons{
+    width:20px;
+    height:20px;
+    
+}
+
+.btn-descartar:hover{
+    background:red;
+    color:white;
+}
