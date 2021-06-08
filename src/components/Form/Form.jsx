@@ -44,6 +44,7 @@ export const Form = () => {
             theme:"",
             status:""
         })
+        return swal.fire('','Formulario descartado','info');
     }
     const handleGuardar=(e)=>{
         e.preventDefault();
@@ -57,12 +58,12 @@ export const Form = () => {
                     <h6 className="mt-3">
                         Logo del espacio
                     </h6>
-                    <div className="logoimage">
-                        <img src={imageProfile} alt="B" className="imageLogo"></img>
+                    <div className="imagenlogo">
+                        <img src={imageProfile} alt="B" className="imgLogo"></img>
                         <button className="btn btnPeopleAm colorgray ml-3" 
                             onClick={ButtonFileHandler}>
                         <span className="fas fa-upload"></span>Subir Logo</button>
-                        <input type= "file" style={{ display: 'none' }} ref={FileUpload}></input>
+                        <input type= "file" style={{ display: 'none' }} ref={FileUpload} onChange={handleChangeInput}></input>
                     </div>
                     <Logo />
                     <div className="form">
@@ -94,19 +95,19 @@ export const Form = () => {
                         <Logo />
                         <ThemePicker />
                         <Status />
-                        <div className="mt-5 mb-5">
-                            <button 
-                            className="btn btn-primary"
-                            disabled={
-                            flagButton
-                                ?false
-                                :true
-                            }
-                            onClick={handleGuardar}
-                            >Guardar cambios</button>
-                            <button className="btn btn-descartar ml-2"
-                            onClick={handleDescartar}
-                            >Descartar</button>
+                    <div className="mt-5 mb-5">
+                        <button 
+                        className="btn btn-primary"
+                        disabled={
+                        flagButton
+                            ?false
+                            :true
+                        }
+                        onClick={handleGuardar}
+                        >Guardar cambios</button>
+                        <button className="btn btn-descartar ml-2"
+                        onClick={handleDescartar}
+                        >Descartar</button>
                         </div>
                     </div>
                 </div>
